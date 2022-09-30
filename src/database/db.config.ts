@@ -14,6 +14,7 @@ export const connect = async (): Promise<void> => {
     try {
         //MONGODB CONNECTION
         await mongoose.connect(uri!)
+        console.log(uri);
     } catch (error) {
         console.log(`Database connection error: ${error}`)
         process.exit(1)
