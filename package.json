@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.ts",
-    "dev": "tsc && node dist/index",
+    "dev": "nodemon src/index.ts",
+    "start": "tsc && node dist/index",
     "seed": "ts-node-dev --transpile-only --no-notify --exit-child src/seeders/index.ts"
   },
   "repository": {
