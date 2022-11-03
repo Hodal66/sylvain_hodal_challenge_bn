@@ -30,7 +30,6 @@ export const userResolver: any = {
   },
   Mutation: {
     async sign_up(parent: any, args: any, context: any) {
-      console.log(context);
       const { input } = args;
       const { email, password, firstName, secondName } = input;
 
@@ -65,7 +64,6 @@ export const userResolver: any = {
     async login_user(parent: any, args: any, context: any) {
       const { email, password } = args;
       const existingUser = await User.findOne({ email }).exec();
-      console.log(existingUser);
       if (!existingUser) {
         throw new Error("User DOES NOT exists");
       }

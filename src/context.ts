@@ -9,7 +9,6 @@ export interface Context {
   secondName?: String;
 }
 export const context = ({ req }: { req: Request }): Context => {
-  console.log(req);
   const token =
     req && req.headers.authorization
       ? decodeAuthHeader(req.headers.authorization)
